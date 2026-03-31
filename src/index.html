@@ -21,9 +21,18 @@
 <body class="bg-black text-white">
 
   <!-- Navbar -->
-  <nav class="fixed w-full flex justify-between p-5 bg-black bg-opacity-60">
-    <h1 class="text-xl font-bold">Melodia</h1>
-  </nav>
+ <nav class="fixed w-full flex justify-between p-5 bg-black bg-opacity-60">
+  <h1 class="text-xl font-bold">Melodia</h1>
+
+  <button id="menuBtn" class="md:hidden" type="button" title="Abrir menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div id="menu" class="hidden absolute top-16 right-5 bg-black p-5 rounded">
+    <a href="#" class="block">Home</a>
+    <a href="#" class="block">Funcionalidades</a>
+  </div>
+</nav>
 
   <!-- Hero -->
   <section class="h-screen flex flex-col justify-center items-center text-center">
@@ -95,6 +104,6 @@
     </button>
   </form>
 </section>
-
+<script src="script.js"></script>
 </body>
 </html>
