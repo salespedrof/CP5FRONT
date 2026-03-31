@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melodia | Sua Música, Sua Forma</title>
+    <meta
+      name="description"
+      content="Descubra novos artistas, crie playlists personalizadas e viva uma experiência musical com qualidade superior no app Melodia."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+                900: '#2e1065'
+              },
+              accent: '#22d3ee'
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            },
+            boxShadow: {
+              soft: '0 10px 30px rgba(15, 23, 42, 0.12)'
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8tbtAm1Q1p+Y8wC1L0Xbgc4YVwxv7Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-slate-950 text-white font-sans antialiased">
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-md">
+          <a href="#home" class="flex items-center gap-3 text-lg font-bold tracking-tight">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 shadow-soft">
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <span>Melodia</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 text-sm text-slate-200 md:flex">
+            <a class="transition hover:text-white" href="#beneficios">Benefícios</a>
+            <a class="transition hover:text-white" href="#funcionalidades">Funcionalidades</a>
+            <a class="transition hover:text-white" href="#depoimentos">Depoimentos</a>
+            <a class="transition hover:text-white" href="#contato">Contato</a>
+          </nav>
+
+          <div class="hidden md:block">
+            <a
+              href="#contato"
+              class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
+            >
+              Testar agora
+            </a>
+          </div>
+
+          <button
+            id="menuButton"
+            class="rounded-xl border border-white/10 p-3 text-white md:hidden"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <div id="mobileMenu" class="mt-3 hidden rounded-2xl border border-white/10 bg-slate-900/95 p-5 shadow-soft md:hidden">
+          <div class="flex flex-col gap-4 text-sm text-slate-200">
+            <a href="#beneficios" class="mobile-link">Benefícios</a>
+            <a href="#funcionalidades" class="mobile-link">Funcionalidades</a>
+            <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+            <a href="#contato" class="mobile-link">Contato</a>
+            <a href="#contato" class="rounded-full bg-white px-4 py-3 text-center font-semibold text-slate-950">Testar agora</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="relative overflow-hidden pt-32">
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.35),_transparent_35%),radial-gradient(circle_at_right,_rgba(34,211,238,0.18),_transparent_20%)]"></div>
+        <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 py-20 lg:grid-cols-2">
+          <div>
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-2 text-sm text-brand-100">
+              <i class="fa-solid fa-headphones-simple"></i>
+              Qualidade de som superior e descoberta inteligente
+            </span>
+            <h1 class="mt-6 text-4xl font-extrabold leading-tight text-white md:text-6xl">
+              Melodia: <span class="text-brand-500">Sua Música, Sua Forma</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+              Encontre novos artistas, crie playlists com a sua identidade e viva uma experiência musical intuitiva, moderna e feita para acompanhar cada momento do seu dia.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#contato"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-semibold text-slate-950 transition hover:scale-[1.02]"
+              >
+                Ouvir Agora
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a
+                href="#funcionalidades"
+                class="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-4 font-semibold text-white transition hover:bg-white/5"
+              >
+                Ver recursos
+              </a>
+            </div>
+
+            <div class="mt-10 grid max-w-lg grid-cols-3 gap-4 text-center">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-2xl font-bold">+2M</p>
+                <p class="mt-1 text-sm text-slate-300">Músicas disponíveis</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-2xl font-bold">98%</p>
+                <p class="mt-1 text-sm text-slate-300">Aprovação dos usuários</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-2xl font-bold">24h</p>
+                <p class="mt-1 text-sm text-slate-300">Música sem parar</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-8 top-10 h-32 w-32 rounded-full bg-brand-500/30 blur-3xl"></div>
+            <div class="absolute -right-6 bottom-6 h-32 w-32 rounded-full bg-cyan-400/20 blur-3xl"></div>
+            <div class="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-soft backdrop-blur">
+              <div class="rounded-[1.75rem] bg-gradient-to-br from-brand-700 via-slate-900 to-slate-950 p-6">
+                <div class="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="text-sm text-slate-400">Tocando agora</p>
+                      <h2 class="mt-1 text-2xl font-bold">Noite Neon</h2>
+                      <p class="mt-1 text-sm text-slate-300">Aurora Vibe</p>
+                    </div>
+                    <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-600 text-xl">
+                      <i class="fa-solid fa-music"></i>
+                    </div>
+                  </div>
+
+                  <div class="mt-8 rounded-2xl bg-white/5 p-4">
+                    <div class="mb-3 flex items-center justify-between text-sm text-slate-300">
+                      <span>Playlist personalizada</span>
+                      <span>87% match</span>
+                    </div>
+                    <div class="h-2 rounded-full bg-white/10">
+                      <div class="h-2 w-[87%] rounded-full bg-brand-500"></div>
+                    </div>
+                    <div class="mt-5 grid gap-3">
+                      <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
+                        <div>
+                          <p class="font-medium">Ondas do Amanhã</p>
+                          <p class="text-sm text-slate-400">Indie eletrônico</p>
+                        </div>
+                        <i class="fa-solid fa-heart text-accent"></i>
+                      </div>
+                      <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
+                        <div>
+                          <p class="font-medium">Gravidade Leve</p>
+                          <p class="text-sm text-slate-400">Pop alternativo</p>
+                        </div>
+                        <i class="fa-solid fa-circle-play text-brand-500"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3 text-sm text-slate-300">
+                    <span><i class="fa-solid fa-sparkles mr-2 text-accent"></i>Descoberta de novos artistas</span>
+                    <span class="font-semibold text-white">Ativo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="beneficios" class="mx-auto max-w-7xl px-6 py-20">
+        <div class="max-w-2xl">
+          <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-500">Benefícios</span>
+          <h2 class="mt-4 text-3xl font-bold md:text-4xl">Tudo que você precisa para ouvir melhor, descobrir mais e curtir sem esforço</h2>
+          <p class="mt-4 text-slate-300">A proposta do Melodia combina experiência fluida, personalização e um catálogo pensado para quem vive música todos os dias.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-600 text-xl">
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold">Som de alta qualidade</h3>
+            <p class="mt-3 text-slate-300">Ouça suas músicas favoritas com mais nitidez, profundidade e imersão em qualquer dispositivo.</p>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-600 text-xl">
+              <i class="fa-solid fa-list-ul"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold">Playlists personalizadas</h3>
+            <p class="mt-3 text-slate-300">Recomendações inteligentes e listas que combinam com o seu gosto e com seu momento.</p>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-600 text-xl">
+              <i class="fa-solid fa-compact-disc"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold">Novos artistas toda semana</h3>
+            <p class="mt-3 text-slate-300">Saia do óbvio com sugestões de lançamentos, independentes e tendências escolhidas para você.</p>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-600 text-xl">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold">Interface intuitiva</h3>
+            <p class="mt-3 text-slate-300">Navegação simples, moderna e pensada para você encontrar o que quer em poucos toques.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="funcionalidades" class="bg-white/[0.03] py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-500">Funcionalidades</span>
+              <h2 class="mt-4 text-3xl font-bold md:text-4xl">Uma experiência visual, clara e feita para converter visitantes em usuários</h2>
+              <p class="mt-4 text-slate-300">A landing apresenta os principais diferenciais do app com clareza, reforçando confiança, valor e desejo de experimentação.</p>
+
+              <div class="mt-8 space-y-4">
+                <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+                  <h3 class="text-lg font-semibold">Descoberta musical inteligente</h3>
+                  <p class="mt-2 text-slate-300">Sugestões com base em hábitos de escuta, gêneros favoritos e momentos do dia.</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+                  <h3 class="text-lg font-semibold">Biblioteca personalizada</h3>
+                  <p class="mt-2 text-slate-300">Organize suas playlists, curtidas e artistas salvos em uma interface limpa e objetiva.</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+                  <h3 class="text-lg font-semibold">Experiência responsiva</h3>
+                  <p class="mt-2 text-slate-300">Layout adaptado para celular, tablet e desktop, garantindo boa navegação em qualquer tela.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2">
+              <article class="rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-soft">
+                <div class="text-brand-500"><i class="fa-solid fa-bolt text-2xl"></i></div>
+                <h3 class="mt-5 text-xl font-semibold">Rápido para começar</h3>
+                <p class="mt-3 text-slate-300">Em poucos passos, o usuário entende o valor do app e é incentivado a testar.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-soft">
+                <div class="text-brand-500"><i class="fa-solid fa-wand-magic-sparkles text-2xl"></i></div>
+                <h3 class="mt-5 text-xl font-semibold">Visual moderno</h3>
+                <p class="mt-3 text-slate-300">Cores vibrantes, contraste forte e identidade digital coerente com o universo musical.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-soft">
+                <div class="text-brand-500"><i class="fa-solid fa-users text-2xl"></i></div>
+                <h3 class="mt-5 text-xl font-semibold">Prova social</h3>
+                <p class="mt-3 text-slate-300">Depoimentos reforçam credibilidade e tornam a proposta mais confiável.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-soft">
+                <div class="text-brand-500"><i class="fa-solid fa-envelope-open-text text-2xl"></i></div>
+                <h3 class="mt-5 text-xl font-semibold">Captação de leads</h3>
+                <p class="mt-3 text-slate-300">Formulário objetivo para coletar contatos e apoiar campanhas futuras de marketing.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos" class="mx-auto max-w-7xl px-6 py-20">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-500">Depoimentos</span>
+            <h2 class="mt-4 text-3xl font-bold md:text-4xl">Quem usa o Melodia sente a diferença desde o primeiro play</h2>
+          </div>
+          <p class="max-w-xl text-slate-300">Comentários que reforçam experiência, descoberta musical e facilidade de uso, ajudando a aumentar a confiança do visitante.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <p class="text-lg leading-8 text-slate-200">“Eu descobri artistas incríveis em poucos dias. O app parece entender exatamente o que eu quero ouvir.”</p>
+            <div class="mt-6 flex items-center gap-4">
+              <div class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-600 font-bold">AM</div>
+              <div>
+                <h3 class="font-semibold">Ana Martins</h3>
+                <p class="text-sm text-slate-400">Usuária premium</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <p class="text-lg leading-8 text-slate-200">“As playlists personalizadas realmente fazem sentido. É um dos apps mais intuitivos que já usei.”</p>
+            <div class="mt-6 flex items-center gap-4">
+              <div class="flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500 font-bold">RS</div>
+              <div>
+                <h3 class="font-semibold">Rafael Silva</h3>
+                <p class="text-sm text-slate-400">Estudante e produtor musical</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <p class="text-lg leading-8 text-slate-200">“A qualidade do som e o visual do aplicativo me conquistaram. Simplesmente gostoso de usar.”</p>
+            <div class="mt-6 flex items-center gap-4">
+              <div class="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 font-bold">JL</div>
+              <div>
+                <h3 class="font-semibold">Julia Lopes</h3>
+                <p class="text-sm text-slate-400">Criadora de conteúdo</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contato" class="pb-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid gap-10 rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-700/20 via-slate-900 to-slate-950 p-8 shadow-soft lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+            <div>
+              <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-300">Formulário de contato</span>
+              <h2 class="mt-4 text-3xl font-bold md:text-4xl">Receba novidades do Melodia e seja um dos primeiros a experimentar</h2>
+              <p class="mt-4 max-w-xl text-slate-300">Colete leads para campanhas futuras com um formulário simples, responsivo e direto ao ponto.</p>
+
+              <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="font-semibold">Atualizações exclusivas</p>
+                  <p class="mt-2 text-sm text-slate-300">Lançamentos, playlists especiais e acesso antecipado a novidades.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="font-semibold">Campanhas de marketing</p>
+                  <p class="mt-2 text-sm text-slate-300">Base pronta para relacionamento e futuras ações promocionais.</p>
+                </div>
+              </div>
+            </div>
+
+            <form id="leadForm" class="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-6">
+              <div class="grid gap-5">
+                <div>
+                  <label class="mb-2 block text-sm font-medium text-slate-200" for="name">Nome</label>
+                  <input id="name" name="name" type="text" placeholder="Seu nome" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-500 focus:outline-none" required />
+                </div>
+                <div>
+                  <label class="mb-2 block text-sm font-medium text-slate-200" for="email">E-mail</label>
+                  <input id="email" name="email" type="email" placeholder="voce@email.com" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-500 focus:outline-none" required />
+                </div>
+                <div>
+                  <label class="mb-2 block text-sm font-medium text-slate-200" for="interest">O que mais te interessa?</label>
+                  <select id="interest" name="interest" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white focus:border-brand-500 focus:outline-none">
+                    <option value="Playlists personalizadas">Playlists personalizadas</option>
+                    <option value="Descoberta de artistas">Descoberta de artistas</option>
+                    <option value="Qualidade de som">Qualidade de som</option>
+                    <option value="Novidades do app">Novidades do app</option>
+                  </select>
+                </div>
+                <button type="submit" class="rounded-full bg-white px-6 py-4 font-semibold text-slate-950 transition hover:scale-[1.01]">Quero receber novidades</button>
+                <p id="formMessage" class="hidden rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-slate-950/80">
+      <div class="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="font-semibold text-white">Melodia</p>
+          <p class="mt-1">Sua música, sua forma.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-5">
+          <a href="#" class="transition hover:text-white">Instagram</a>
+          <a href="#" class="transition hover:text-white">YouTube</a>
+          <a href="#" class="transition hover:text-white">TikTok</a>
+          <a href="#" class="transition hover:text-white">Política de Privacidade</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html

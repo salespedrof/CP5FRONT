@@ -4,13 +4,20 @@ Aluno-Pedro Sales Ferreira RM-566910
 
 Landing page criada para o App Melodia (app fictício feito pelo aluno Pedro Sales para o checkpoint).
 
-##  Tecnologias
-- HTML
+## Objetivo
+Criar uma landing page moderna e responsiva para o app de músicas Melodia.
+
+## Tecnologias
+- HTML5
 - Tailwind CSS
 - JavaScript
+- Font Awesome
+- Google Fonts
 
-##  Objetivo
-Criar uma página moderna e responsiva para conversão de usuários.
-
-##  Deploy
-Use GitHub Pages ou Vercel.
+## Estrutura
+- Hero Section
+- Benefícios
+- Funcionalidades
+- Depoimentos
+- Formulário de contato
+- Rodapé
